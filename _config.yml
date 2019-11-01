@@ -1,11 +1,11 @@
 # Site settings
-author: Alina Kornilova
-title: 
+author: Alina 
+title: alinamalvin
 header-img: img/home-bg.png
 email: alinakornilova78@gmail.com
-copyright_name: Alina Kornilova
+copyright_name: Alina 
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Software Engineering Course Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  alinamalvin
