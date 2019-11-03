@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Basics of CLI Project"
-date:       2019-11-03 00:34:07 +0000
+date:       2019-11-02 20:34:08 -0400
 permalink:  basics_of_cli_project
 ---
 
@@ -11,9 +11,9 @@ Hi there,
 In this post, I will write about the main concepts and tools I used to build my CLI Project. There are a variety of principles you have to implement in your project to make it work, but I will focus on the most important of them.
 
 **Creating a GEM**
-Gem is a universal, standard format of structure for programs and libraries. It comes as a package, and once you install it you don`t need to worry about creating a respiratory and establishing dependencies between files - Ruby will do it for you!
+Gem is a universal, standard format of structure for programs and libraries. It comes as a package, and once you install it you dont need to worry about creating a respiratory and establishing dependencies between files - Ruby will do it for you!
 You can install a gem using a bundler, simply type *bundle gem "name of your gem"* in your terminal.
-Now your gem is created! one of the most important files in any gem is *gemspec* file that establishes dependencies for library`s development- it describes how all files are related and if you want to add additional dependencies (such as pry, nokogiri etc.) you can add them to this file as well. 
+Now your gem is created! one of the most important files in any gem is *gemspec* file that establishes dependencies for librarys development- it describes how all files are related and if you want to add additional dependencies (such as pry, nokogiri etc.) you can add them to this file as well. 
 
 **Data Scraping**
 Scraping is a process of transferring data from one source to your program so you can use that data in the way you decided. For this purposes, you can install Nokogiri (you install this bundler by requiring it in your gemspec file). In your lib file, you will describe the way how nokogiri is going to scape data from the source into your program. You will have to create a Class , and within this class define a method that will establish a variable (doc) equal to HTML of the source. 
