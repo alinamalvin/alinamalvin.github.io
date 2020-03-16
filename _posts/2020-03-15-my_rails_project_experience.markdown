@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My Rails Project Experience"
-date:       2020-03-16 02:39:58 +0000
+date:       2020-03-15 22:39:59 -0400
 permalink:  my_rails_project_experience
 ---
 
@@ -10,7 +10,7 @@ Hi everyone,
 I just finished my Rails project and I feel very accomplished. Three projects behind and I finally started to feel like I develop a bit of "programmer mindset". With previous projects, every single bug my app had to make my heart sink and gave me anxiety. When I saw an error I already imagined a few hours of trying to figure out what the problem is and another couple of days to figure out how to fix it. However this time it is different. I am not scared anymore of seeing an error. Moreover, I feel sort of excited. It is a very similar feeling to the one you have on the roller-coast- you are scared, but you are awaiting for the adrenaline release in your body once it is over. Same here: when I see an error now I am no longer scared, but excited to figure out and learn new things.
 
 I will share some steps that helped me to approach the problems with the right mindset:
-1) Don`t panic if you an error! You probably have seen it a hundred times throughout the course, but I can`t stress it enough. Programming work includes parts: building code and debugging it. It is a normal process and no programmer in the world doesn`t get an error in his code. 
+1) Dont panic if you an error! You probably have seen it a hundred times throughout the course, but I cant stress it enough. Programming work includes parts: building code and debugging it. It is a normal process and no programmer in the world doesnt get an error in his code. 
 
 2) This step is very important: try to find the reason for the error. You have to read the error message very carefully - Ruby always gives you a pretty straightforward hint. I think reading an error message correctly is 70% of the problem-solving.
 
