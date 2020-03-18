@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Class Methods in Associations"
-date:       2020-03-18 23:50:56 +0000
+date:       2020-03-18 19:50:57 -0400
 permalink:  class_methods_in_associations
 ---
 
@@ -23,17 +23,17 @@ How you can use it?
 
 What I wanted to do is to simply show all reviews by a particular user. I did it through the following steps:
 
-1) Since i already had a class User, I created a helper method called current_user. This method was using a class User that is identified by a current session.
-2) I created a method Create for reviews that allowed to associate all reviews with the current_users (in other words the users that created them). 
-3) Now I could call current_user.reviews on my "my reviews" method that allowed to show all reviews created by the current user. Simple as that! 
+<p>1) Since i already had a class User, I created a helper method called current_user. This method was using a class User that is identified by a current session.</p>
+<p>2) I created a method Create for reviews that allowed to associate all reviews with the current_users (in other words the users that created them). </p>
+<p>3) Now I could call current_user.reviews on my "my reviews" method that allowed to show all reviews created by the current user. Simple as that! </p>
 
 What other things you could do thanks to class methods?
 
 I found the following methods useful:
 
-collection.clear -E.g. current_user.reviews.clear - will delete all the reviews by a current user. 
-collection<<(object, …) - E.g. current_user.reviews<<(review) will add a new review to the reviews of the current user
-collection.size - E.g. current_user.reviews.size - will return a total amount of reviews by the ucrrent user. 
+collection.clear -E.g. `current_user.reviews.clear` - will delete all the reviews by a current user. 
+collection<<(object, …) - E.g. `current_user.reviews<<(review) `will add a new review to the reviews of the current user
+collection.size - E.g. `current_user.reviews.size `- will return a total amount of reviews by the ucrrent user. 
 
 There are many other methods available and it definitely makes your life much easier. There is no need to complicate a code when you can get what you want with just a one-line method. 
 
