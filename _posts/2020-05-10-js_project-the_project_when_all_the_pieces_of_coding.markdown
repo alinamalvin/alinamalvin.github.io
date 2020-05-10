@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JS Project-the project, when all the pieces of coding "
-date:       2020-05-10 21:34:46 +0000
+date:       2020-05-10 17:34:47 -0400
 permalink:  js_project-the_project_when_all_the_pieces_of_coding
 ---
 
