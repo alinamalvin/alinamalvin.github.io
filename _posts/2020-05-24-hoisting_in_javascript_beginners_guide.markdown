@@ -14,8 +14,8 @@ This term is often used in terms of raising a flag, for example:
 
 Therefore, hoisting as a noun can be defined as an act of raising something. While hoisting in JavaScript gives its hoisting much more amicable meaning than pirates, it’s intention is still the same - to declare an act before it’s execution.
 
-### Variable Hoisting
-#### Var
+**## Variable Hoisting
+### Var**
 In programming, we use variables. variable is a value that can change, depending on conditions or on information passed to the program. Let’s take an example using the analogy with pirates. 
 Imagine, we decided to build a Pirates Attack game app. There are two players-one plays for pirates, and another one - for defendants. We approached the part in our code, where we need to make sure pirates have their flags on the ship when they are leaving their land to enemies' land to raise it. We do not know yet what color of the flag pirates will raise (it depends on the second player’s actions). While approaching the enemiies land, the captain may look at the binocular and sees that the land is full of gold, then he will give an order to raise a black flag. Otherwise, he might look at the land and see that there is his old buddy from elementary school is living there, and he doesn’t want to attack him, then he will give an order to raise a white flag. All we care for now is that pirates ship need a flag variable in our app sometimes in the future, and we can determine the value later.  
 ![](https://a.radikal.ru/a04/2005/c3/dbd308015243.png)
@@ -46,7 +46,7 @@ Now let’s imagine that the captain is getting old and forgot not only to tell 
 Due to this reason, we have to be careful and always declare and assign the variable simultaneously: 
 ![](https://a.radikal.ru/a22/2005/a3/47f2833eb2f6.png)
 
-#### Let 
+**### Let** 
 The variables declared with `var` keyword are function scoped (they can be seen throughout the entire function). Now let’s examine what happens when we use block-scoped variables defined with `let` and `const` keywords.  
 ![](http://a.radikal.ru/a15/2005/25/44f4b998d22f.png)
 
@@ -56,7 +56,7 @@ Now, let’s try to declare a variable before the execution code, and assign it 
 
 Wohoo! JavaScript will still run the code even if the variable was not assigned yet, and gives us `undefined`. However, such implementation will most likely cause an undesired outcome when you run your application. And again, we come to the importance of declaring and assigning variables before executing them.
 
-#### Const
+**### Const**
 There is one more keyword that ES6 has event a stricter mode for - `const` . It is, similar to `let` variables, is a block-scoped variable, but it has its differences. Unlike `let` variable, `const` is immutable variable, which means it cannot be reassigned to a different value. If `let` allows code to be executed when the variable was at least declared before the execution, `const` will not execute code at all unless a variable was both declared and assigned prior to execution.  
 ![](http://c.radikal.ru/c34/2005/16/1c34e835175a.png)
 
@@ -67,21 +67,21 @@ ES6 still performs hoisting in all cases considered above: `var`, `let`, and `co
 `Var` is initialized with a value “undefined"
 `Let` and const remains initialized (just declared)
 
-### Hoisting functions
+**## Hoisting functions**
 All functions can be divided into two types: Function Declaration and Function Expressions
 
-#### Function Declarations
+**### Function Declarations**
 Function declarations, similar to variable declarations, are hoisted. We can call a function before declaring it.  
 ![](http://a.radikal.ru/a19/2005/7f/00fd271addbe.png)
 
-#### Function Expression 
+**### Function Expression** 
 Function Expressions are not hoisted. Let’s try:
 ![](http://b.radikal.ru/b35/2005/95/5aec50f237a6.png)
  
 Even if we try to declare a function and express it, JavaScript will only hoist the declaration, but not the assignment. Therefore, it will not see that variable as a function:
 ![](http://c.radikal.ru/c30/2005/e6/ac220c0de162.png)
 
-### Precedence
+**## Precedence**
 Hoisting also has a specific hierarchy:
 ![](http://c.radikal.ru/c22/2005/e3/d153f5b47112.jpg)
 
@@ -91,7 +91,7 @@ When hoisting, JavaScript will always make a priority to hoist variable assignme
 As we see, JavaScript applied the assignment to the “flag” given by it’s variable, not the function declaration. But if we just declare a variable, then JS will prefer hoisting function declaration instead:
 ![](http://d.radikal.ru/d40/2005/60/a2b2c57be869.png)
 
-### Classes
+**## Classes**
 Classes, similar to functions, can be classified as declaration classes and expression classes. 
 Declaration class is hoisted, but remains uninitialized:
 ![](http://c.radikal.ru/c10/2005/d1/b61defe91065.png)
@@ -104,6 +104,6 @@ Class expressions, same as function expressions, are not hoisted:
 
 JS did hoist var Flag, but as a variable declaration (remember the hoisting priority of arable declaration over function declaration?), not as a function. Therefore, it didn not hoist the variables assigned to a class.
 
-#### Conclusion
+### Conclusion
 To summarize all the above, lets bring all the information into a diagram:
 ![](http://c.radikal.ru/c14/2005/f2/b1e39176ce13.jpg)
