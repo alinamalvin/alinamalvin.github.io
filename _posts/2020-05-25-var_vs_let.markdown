@@ -1,0 +1,92 @@
+---
+layout: post
+title:      "var vs let "
+date:       2020-05-25 22:22:34 +0000
+permalink:  var_vs_let
+---
+
+In this blog I am going to describe the differences between `var` and `let `keywords and how they impact the functionality of your code. 
+## What is `let`?
+`Let` was introduced fairly recently by ES6 as a block-scoped variable. `Var` is a function-scoped variable, which means that JavaScript sees it in any place within the function. Contrary to `var`, `let` variable is seen only within the block, and is not seen outside the block. 
+
+## What scope it has?
+Since visibility differs, then we can say their scopes are different as well. We can provide the following examples.
+Here `var` is perfectly seen by JavaScript in the block:
+![](http://c.radikal.ru/c23/2005/30/3b8799f00481.png)
+
+But `let` is not seen and therefore we get a Reference Error:
+![](http://c.radikal.ru/c05/2005/7b/69f8868804fa.png)
+
+## When it is used?
+Since `let `has limited visibility, it is usually used when it needed only with the block:
+![](http://b.radikal.ru/b00/2005/a1/7e1e8245010e.png)
+
+`Var`, on the contrary, can be used when it needs to be accessed outside the block:
+![](http://c.radikal.ru/c25/2005/99/fe9204f6c177.png)
+
+## Where it can be added?
+`Var` and `let` can be added as different properties. 
+
+![](http://c.radikal.ru/c40/2005/d6/49f14bc06ef2.png)
+Here the `var` variable was added to the global object (window) as a property which means it could be seen by JavaScript. 
+
+![](http://d.radikal.ru/d28/2005/b0/a09f413fe61c.png)
+However here, `let` wasn't visible to global object and therefore was not added to the global object.
+
+## Can it be redeclared and reassigned? 
+`Var` can be redeclared and reassigned. This is one of the reasons why it is not recommended to use` var` in big projects. Since JS won't prevent you from re-declaring and re-assigning the value, it is easier to accidentally pass the data you did not intend to use into your code. 
+Here we are perfectly able to re-declare the variable numbers:
+![](http://d.radikal.ru/d30/2005/65/8748bce204a6.png)
+
+And here just to re-assign the value of the variable:
+![](http://c.radikal.ru/c17/2005/c5/2eba39e955e7.png)
+
+`Let` can not be redeclared, but can be reassigned. Let's take a look:
+
+![](http://d.radikal.ru/d23/2005/ef/6e9eb5787f89.png)
+Here we tried to re-declare the variable numbers, but JS threw us a ReferenceError and didn't allow us to do so.
+
+![](http://a.radikal.ru/a30/2005/46/9e59c8dad0aa.png)
+And here we were successfully able to re-assign the value of names. Exactly the same as we were able to do with `var`. 
+
+## Is it hoisted?
+Both `var` and `let` can be hoisted by JS. However, there are differences in initialization. Variables have two lifecycles:
+1. Creation  - this is what makes var and let different;
+2. Execution - this is where var and let acts the same;
+
+If we haven't declared `var` before it's execution, JS will not only hoist it for us but also initialize it  with "undefined":
+![](https://c.radikal.ru/c16/2005/74/d00713e55acc.png)
+Therefore, during the first cycle (creation), the variable is assigned storage *and* initialized. Then, during the second cycle, var is assigned the value specified by the assignment. 
+
+But if we forgot to initialize `let`, JS will not be that kind to us and gives us a RefenreceError, telling that it did not want to do our job of initializing a variable for us:
+![](http://)http://a.radikal.ru/a15/2005/25/44f4b998d22f.png
+In the case with let, the first phase consists of only JS assigning storage for `let` (hoisting), but not initializing. Thus, the error is received since JS doesn't recognize the variable (it was not assigned to anything).  It cannot reach the second phase and assign the specified value since it crashed at the first phase. 
+
+Now, let summarize the similarities and differences of `var` and `let`: 
+## Similarities:
+1. Are used to declare variables;
+2. Are hoisted;
+2. Have two phases of lifecycles: creation and execution;
+3. Assign the specified value during execution phase;
+4. Can be reassigned;
+
+## Differences:
+1. `Var `is initialized during hoisting; `let` - not;
+2. `Var `has a function-scope; `let`- blocked-scope;
+3. `Var` is used when access to the variable is needed from the outside of the block; `let` - from inside of the block only.
+4. `Var` is added as a property to global object; `let` - is not;
+5.  `Var` can be re-declared; `let` - cannot.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
