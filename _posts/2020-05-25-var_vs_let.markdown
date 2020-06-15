@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "var vs let "
-date:       2020-05-25 22:22:34 +0000
+date:       2020-05-25 18:22:35 -0400
 permalink:  var_vs_let
 ---
 
@@ -59,7 +59,7 @@ If we haven't declared `var` before it's execution, JS will not only hoist it fo
 Therefore, during the first cycle (creation), the variable is assigned storage *and* initialized. Then, during the second cycle, var is assigned the value specified by the assignment. 
 
 But if we forgot to initialize `let`, JS will not be that kind to us and gives us a RefenreceError, telling that it did not want to do our job of initializing a variable for us:
-![](http://)http://a.radikal.ru/a15/2005/25/44f4b998d22f.png
+![](http://)http://a.radikal.ru/a15/2005/25/44f4b998d22f.png)
 In the case with let, the first phase consists of only JS assigning storage for `let` (hoisting), but not initializing. Thus, the error is received since JS doesn't recognize the variable (it was not assigned to anything).  It cannot reach the second phase and assign the specified value since it crashed at the first phase. 
 
 Now, let summarize the similarities and differences of `var` and `let`: 
