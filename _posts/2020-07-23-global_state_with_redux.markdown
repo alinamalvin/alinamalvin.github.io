@@ -16,8 +16,8 @@ Redux creates a store that is centralized and persistent. All states are now sto
 **How are the store and components connected? **
 
 In order to connect a component to the store, two elements need to be implemented:
-1) Redux needs to be imported from `'react-redux'`
-2) The `connect()` function needs to pass certain functions as arguments from the store to the component: 
+<ul>1) Redux needs to be imported from `'react-redux'`</ul>
+<ul>2) The `connect()` function needs to pass certain functions as arguments from the store to the component: 
 
 ![](https://c.radikal.ru/c32/2007/18/80987afcbf23.png)
 
@@ -69,9 +69,9 @@ Here we can list the purposes of each of the functions described above:
 
 
 The Redux is a great way to organize your components and their state. It is easy to use it because it is straightforward and, as we could see from the above, requires only 5 steps to make it work:
- 1) Import `{connect}` from `react-redux`
- 2) Write a `connect()` function and pass 1-2 arguments depending on the task of the component
- 3) Write `mapStateToProps` function and pass state as an argument.
- 4.1) Write mapDispatchToProps function and pass dispatch as an argument.
- 4.2) Write the Action Creator component.
- 4.3) Write a Reducer
+ <ul>1) Import `{connect}` from `react-redux`</ul>
+ <ul>2) Write a `connect()` function and pass 1-2 arguments depending on the task of the component </ul>
+ <ul>3) Write `mapStateToProps` function and pass state as an argument.</ul>
+ <ul>4.1) Write mapDispatchToProps function and pass dispatch as an argument.</ul>
+ <ul>4.2) Write the Action Creator component.</ul>
+ <ul>4.3) Write a Reducer</ul>
