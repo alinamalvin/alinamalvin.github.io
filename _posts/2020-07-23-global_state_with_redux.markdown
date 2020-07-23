@@ -69,9 +69,9 @@ Here we can list the purposes of each of the functions described above:
 
 
 The Redux is a great way to organize your components and their state. It is easy to use it because it is straightforward and, as we could see from the above, requires only 5 steps to make it work:
-1) Import `{connect}` from `react-redux`
-2) Write a `connect()` function and pass 1-2 arguments depending on the task of the component.
-3) Write `mapStateToProps` function and pass state as an argument.
-4) 4.1. Write mapDispatchToProps function and pass dispatch as an argument.
-    4.2. Write the Action Creator component.
-    4.3. Write a Reducer
+ 1) Import `{connect}` from `react-redux`
+ 2) Write a `connect()` function and pass 1-2 arguments depending on the task of the component
+ 3) Write `mapStateToProps` function and pass state as an argument.
+ 4.1) Write mapDispatchToProps function and pass dispatch as an argument.
+ 4.2) Write the Action Creator component.
+ 4.3) Write a Reducer
